@@ -34,7 +34,10 @@
   </div>
   <div v-if="state == 6">
     <Vue3Lottie :animationData="love" :height="80" :width="80" />
-    <v-typical :steps="['I love you to the moon and back! Enjoy!']" :loop="1" :wrapper="'p'"></v-typical>
+    <v-typical :steps="['I love you to the moon and back!']" :loop="1" :wrapper="'p'"></v-typical>
+    <img class="album" src="./assets/images/haha.jpg" width="150"> <img class="album" src="./assets/images/hihi.jpg"
+      width="150">
+    <br>
     <button type="button" v-on:click="to">Thank youuu!</button>
   </div>
   <div v-if="state == 7">
@@ -118,11 +121,13 @@ export default {
 </script>
 
 <style>
+.album{
+  border-radius: 20px;
+  padding: 10px;
+}
 .bobot{
   position: absolute;
-    /* Make the div absolutely positioned */
     bottom: 0;
-    /* Place it at the bottom of the container */
     right: 0;
 }
 body {
