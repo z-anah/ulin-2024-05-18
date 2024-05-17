@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-typical class="blink" :steps="['This is a big story short', 1000]" :loop="1" :wrapper="'h2'"></v-typical>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import VTypical from 'vue-typical';
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    VTypical,
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-image: url(./assets/images/wallpaper.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.blink::after {
+  content: '|';
+  animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 </style>
