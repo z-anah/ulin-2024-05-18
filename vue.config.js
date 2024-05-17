@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true
-})
+  base: "/ulin-2024-05-18/",
+  transpileDependencies: true,
+});
